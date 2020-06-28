@@ -1,0 +1,21 @@
+.notification {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.success {
+  color: green;
+}
+
+.warning {
+  color: orange;
+}
+
+.error {
+  color: red;
+}
+/* Применится только к ссылкам которые лежат внутри тега с классом social-links */
+.social-links a {
+  color: blue;
+  text-decoration: none;
+}
