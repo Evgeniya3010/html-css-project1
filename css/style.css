@@ -19,3 +19,90 @@
   color: blue;
   text-decoration: none;
 }
+#title {
+  font-weight: 500;
+  color: rgb(100, 85, 70);
+}
+.menu > li {
+  border: 2px solid blue;
+}
+a[title] {
+  color: teal;
+}
+/* Непривычное форматирование фигурных скобок это нормально */
+a[href="https://htmlreference.io"]
+{
+  color: teal;
+}
+
+a[href="https://cssreference.io"]
+{
+  color: orange;
+}
+
+a[href="https://www.youtube.com"]
+{
+  color: red;
+}
+.link {
+  color: teal;
+}
+
+.link:hover {
+  color: orange;
+}
+.social-links .link {
+  color: teal;
+}
+
+.social-links .link:hover,
+.social-links .link:focus {
+  color: orange;
+}
+.social-links .link:active {
+  color: red;
+}
+.social-links .link:visited {
+  color: green;
+}
+.schedule-body > tr:hover {
+  background-color: orange;
+}
+
+/* Оформление таблицы */
+.schedule {
+  border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+  padding: 8px;
+  border: 1px solid #212121;
+}
+/* Чистый красный цвет: ff (100%) красного, 00 (0%) зеленого, 00 (0%) синего */
+p {
+  color: #ff0000;
+}
+
+/* Чистый зелёный цвет: 00 (0%) красного, ff (100%) зеленого, 00 (0%) синего */
+p {
+  color: #00ff00;
+}
+
+/* Чистый синий цвет: 00 (0%) красного, 00 (0%) зеленого, ff (100%) синего */
+p {
+  color: #0000ff;
+}
+/* Чистый красный цвет с прорачностью в 20% */
+p {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+/* Специфичность - 0 0 0 1 */
+p {
+  color: green;
+}
+
+/* ✅ Специфичность - 0 0 0 2 */
+article > p {
+  color: orange;
+}
