@@ -1,3 +1,7 @@
+body {
+  font-family: Roboto;
+}
+
 .notification {
   font-size: 24px;
   font-weight: 500;
@@ -19,9 +23,12 @@
   color: blue;
   text-decoration: none;
 }
-#title {
-  font-weight: 500;
+.title {
+  font-weight: 1000;
   color: rgb(100, 85, 70);
+}
+.title-item {
+  color: #645546;
 }
 .menu > li {
   border: 2px solid blue;
@@ -79,30 +86,32 @@ a[href="https://www.youtube.com"]
   padding: 8px;
   border: 1px solid #212121;
 }
-/* Чистый красный цвет: ff (100%) красного, 00 (0%) зеленого, 00 (0%) синего */
-p {
-  color: #ff0000;
-}
 
-/* Чистый зелёный цвет: 00 (0%) красного, ff (100%) зеленого, 00 (0%) синего */
-p {
-  color: #00ff00;
-}
-
-/* Чистый синий цвет: 00 (0%) красного, 00 (0%) зеленого, ff (100%) синего */
-p {
-  color: #0000ff;
-}
-
-/* Специфичность - 0 0 0 1 */
-p {
-  color: green;
-}
-
-/* ✅ Специфичность - 0 0 0 2 */
-article > p {
-  color: orange;
-}
+/* 0010 */
 .test-link {
   color: black;
+}
+/* 0001 */
+a {
+  color: #ff0000;
+}
+/* 0011 */
+a.test-link {
+  color: aqua;
+}
+.test-link:hover,
+.test-link:focus {
+  color: tomato;
+}
+.test-link:active {
+  color: teal;
+}
+.post-title {
+  color: orange;
+}
+.post-text {
+  color: brown;
+}
+.post-link {
+  color: orange;
 }
