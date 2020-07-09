@@ -2,116 +2,33 @@ body {
   font-family: Roboto;
 }
 
-.notification {
+/* Используйте разметку и эти стили для практики рассматриваемых свойств */
+.container {
+  display: flex;
+
+  width: 750px;
+  padding: 30px;
+
+  background-color: #455a64;
+}
+
+.element {
+  width: 150px;
+  height: 150px;
+
   font-size: 24px;
-  font-weight: 500;
+  text-align: center;
+  line-height: 150px;
 }
 
-.success {
-  color: green;
+.pink {
+  background-color: #e91e63;
 }
 
-.warning {
-  color: orange;
+.blue {
+  background-color: #2196f3;
 }
 
-.error {
-  color: red;
-}
-/* Применится только к ссылкам которые лежат внутри тега с классом social-links */
-.social-links a {
-  color: blue;
-  text-decoration: none;
-}
-.title {
-  font-weight: 1000;
-  color: rgb(100, 85, 70);
-}
-.title-item {
-  color: #645546;
-}
-.menu > li {
-  border: 2px solid blue;
-}
-a[title] {
-  color: teal;
-}
-/* Непривычное форматирование фигурных скобок это нормально */
-a[href="https://htmlreference.io"]
-{
-  color: teal;
-}
-
-a[href="https://cssreference.io"]
-{
-  color: orange;
-}
-
-a[href="https://www.youtube.com"]
-{
-  color: red;
-}
-.link {
-  color: teal;
-}
-
-.link:hover {
-  color: orange;
-}
-.social-links .link {
-  color: teal;
-}
-
-.social-links .link:hover,
-.social-links .link:focus {
-  color: orange;
-}
-.social-links .link:active {
-  color: red;
-}
-.social-links .link:visited {
-  color: green;
-}
-.schedule-body > tr:hover {
-  background-color: orange;
-}
-
-/* Оформление таблицы */
-.schedule {
-  border-collapse: collapse;
-}
-
-.schedule th,
-.schedule td {
-  padding: 8px;
-  border: 1px solid #212121;
-}
-
-/* 0010 */
-.test-link {
-  color: black;
-}
-/* 0001 */
-a {
-  color: #ff0000;
-}
-/* 0011 */
-a.test-link {
-  color: aqua;
-}
-.test-link:hover,
-.test-link:focus {
-  color: tomato;
-}
-.test-link:active {
-  color: teal;
-}
-.post-title {
-  color: orange;
-}
-.post-text {
-  color: brown;
-}
-.post-link {
-  color: orange;
+.amber {
+  background-color: #ffc107;
 }
