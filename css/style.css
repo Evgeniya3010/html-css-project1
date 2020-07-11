@@ -2,33 +2,36 @@ body {
   font-family: Roboto;
 }
 
-/* Используйте разметку и эти стили для практики рассматриваемых свойств */
-.container {
-  display: flex;
-
-  width: 750px;
-  padding: 30px;
-
-  background-color: #455a64;
+.box {
+  /* border: 5px solid #717273; */
+  padding: 20px;
+  margin: 20px;
+  outline: 2px solid darkblue;
+  margin: auto;
 }
-
-.element {
-  width: 150px;
-  height: 150px;
-
-  font-size: 24px;
-  text-align: center;
-  line-height: 150px;
+.link {
+  display: inline-block;
+  padding: 30px 50px;
+  background-color: tomato;
 }
-
-.pink {
-  background-color: #e91e63;
+.btn {
+  display: inline-block;
+  padding: 20px 40px;
+  border: 2px solid darkslategrey;
+  color: white;
+  background-color: #626262;
+  text-decoration: none;
 }
-
-.blue {
-  background-color: #2196f3;
+.btn:hover,
+.btn:focus {
+  color: tomato;
+  background-color: #fff;
+  border: 10px solid teal;
 }
-
-.amber {
-  background-color: #ffc107;
+.btn-icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  vertical-align: middle;
 }
