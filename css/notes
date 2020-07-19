@@ -1,1 +1,29 @@
 высота height - не для текстового контента, а для оформительных элементов (иконки и тп)
+
+/* когда всем кроме одного */
+.clients .item:not(:nth-child(4)) {
+  background-color: var(--accent-color);
+}
+/* n- это 0. который увеличивается на единицу (0+3=3, поэтому свойство начинает применяться с третьего элемента, :nth-child отсчитывает с начала списка, :nth-last-child - с конца */
+.clients .item:nth-last-child(n + 3) {
+  background-color: sienna;
+}
+/* 3n - применение свойства для 3, 6, 9 єлементов по формуле 0*3+3, 1*3+3 и тд */
+.clients .item:nth-child(3n) {
+  background-color: tomato;
+}
+/* применение свойства всем элементам, кроме 3-х с конца */
+.clients .item:not(:nth-last-child(-n + 3)) {
+  background-color: yellow;
+}
+
+/* когда одному */
+.features .item:nth-child(3) {
+  background-color: seagreen;
+}
+/* всем кроме последненего */
+.features .item:not(:last-child) {
+  background-color: slateblue;
+}
+
+footer- justify content
