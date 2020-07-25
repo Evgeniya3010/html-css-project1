@@ -11,6 +11,23 @@ body {
 .list {
   display: flex;
 }
-.list .a {
-  width: calc((100% - 60px) / 3);
+.title::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-image: url(https://image.flaticon.com/icons/svg/2938/2938075.svg);
+  background-size: contain;
+  background-color: lightblue;
+}
+.title::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  background-image: url(https://image.flaticon.com/icons/svg/786/786429.svg);
+  background-size: contain;
+  background-color: darkblue;
 }
