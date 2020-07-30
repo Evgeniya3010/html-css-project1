@@ -1,16 +1,24 @@
 body {
   font-family: Roboto;
 }
+.main {
+  text-align: center;
+}
 .container {
   width: 1200px;
+  height: 200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  align-items: center;
+  background-color: #f6d8ce;
 }
 .list {
   display: flex;
 }
+
 .title::before {
   content: "";
   display: inline-block;
@@ -30,4 +38,42 @@ body {
   background-image: url(https://image.flaticon.com/icons/svg/786/786429.svg);
   background-size: contain;
   background-color: darkblue;
+}
+.modal-btn {
+  position: relative;
+  display: inline-flex;
+  margin-top: 70px;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+  color: white;
+  background-color: tomato;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: color 500ms linear, background-color 500ms linear;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  color: black;
+  background-color: cadetblue;
+}
+.icon-cat,
+.icon-paw {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 500ms linear;
+}
+.modal-btn:hover .icon-paw {
+  transform: translateY(-50px);
+}
+.icon-cat {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(calc(-50% + 50px));
+}
+.modal-btn:hover .icon-cat {
+  transform: translateY(-50%);
 }
