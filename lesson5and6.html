@@ -23,62 +23,33 @@
       </div>
     </div>
 
-    <form action="" method="post">
-      <!-- Разметка элементов этой формы -->
-      <label>
-        Сообщение
-        <input type="text" />
-      </label>
+    <form action="" class="js-speaker-form">
+      <label for="name">Имя</label>
+      <input type="text" name="user-name" id="name" />
 
-      <button type="submit">Отправить</button>
+      <label for="tel">Телефон</label>
+      <input type="tel" name="tel" id="tel" />
+
+      <label for="email">Почта</label>
+      <input type="email" name="email" id="email" />
+
+      <button type="submit">Оставить заявку</button>
     </form>
 
-    <form>
-      <!-- Клик по тексту "Сообщение" поставит курсор в поле ввода -->
-      <label>
-        Сообщение
-        <input type="text" />
-      </label>
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
 
-      <button type="submit">Отправить</button>
-    </form>
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
 
-    <div role="group">
-      <p>Выберите цвет футболки:</p>
-
-      <label for="color-1">Красный</label>
-      <input id="color-1" name="color" type="radio" value="red" checked />
-
-      <label for="color-2">Белый</label>
-      <input id="color-2" name="color" type="radio" value="white" />
-
-      <label for="color-3">Зелёный</label>
-      <input id="color-3" name="color" type="radio" value="green" />
-    </div>
-
-    <div role="group">
-      <p>Чем вы увлекаетесь?:</p>
-
-      <label for="hobby-1">Музыка</label>
-      <input id="hobby-1" name="hobby" type="checkbox" value="music" />
-
-      <label for="hobby-2">Спорт</label>
-      <input id="hobby-2" name="hobby" type="checkbox" value="sports" />
-
-      <label for="hobby-3">Чтение</label>
-      <input id="hobby-3" name="hobby" type="checkbox" value="reading" />
-    </div>
-
-    <label for="age">Возраст</label>
-
-    <input id="age" type="number" name="age" />
-
-    <label for="age">Возраст</label>
-
-    <input id="age" type="number" min="18" max="120" />
-
-    <input type="tel" name="telephone" />
-    <label for="age">Возраст</label>
-    <input id="age" type="range" name="age" min="0" max="120" value="30" />
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>

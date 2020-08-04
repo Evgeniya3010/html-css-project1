@@ -77,3 +77,6 @@ body {
 .modal-btn:hover .icon-cat {
   transform: translateY(-50%);
 }
+label {
+  display: block;
+}
