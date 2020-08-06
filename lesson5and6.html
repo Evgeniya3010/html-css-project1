@@ -24,38 +24,71 @@
     </div>
 
     <form action="" class="js-speaker-form">
-      <label for="name">Имя</label>
-      <input type="text" name="user-name" id="name" />
-
-      <label for="tel">Телефон</label>
-      <input type="tel" name="tel" id="tel" />
-
-      <label for="email">Почта</label>
-      <input type="email" name="email" id="email" />
-
-      <div role="group" class="">
-        <input type="checkbox" name="topic" value="html" id="html" />
-        <label for="html">HTML</label>
-
-        <input type="checkbox" name="topic" value="css" id="css" />
-        <label for="css">CSS</label>
-
-        <input type="checkbox" name="topic" value="js" id="js" checked />
-        <label for="js">Javascript</label>
+      <div class="form-field">
+        <label for="name">Имя</label>
+        <input
+          type="text"
+          name="user-name"
+          id="name"
+          placeholder="Alex"
+          autofocus
+        />
       </div>
 
-      <input
-        type="radio"
-        name="experience"
-        value="junior"
-        id="junior"
-        checked
-      />
-      <label for="junior">junior</label>
-      <input type="radio" name="experience" value="Middle" id="Middle" />
-      <label for="Middle">Middle</label>
-      <input type="radio" name="experience" value="Senior" id="Senior" />
-      <label for="Senior">Senior</label>
+      <div class="form-field">
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel" placeholder="+380502324333" />
+      </div>
+
+      <div class="form-field">
+        <label for="email">Почта</label>
+        <input type="email" name="email" id="email" />
+      </div>
+
+      <div role="group" class="group">
+        <h2 class="group-title">Тема доклада</h2>
+        <ul class="topic-list list">
+          <li>
+            <input type="checkbox" name="topic" value="html" id="html" />
+            <label for="html">HTML</label>
+          </li>
+
+          <li>
+            <input type="checkbox" name="topic" value="css" id="css" />
+            <label for="css">CSS</label>
+          </li>
+
+          <li>
+            <input type="checkbox" name="topic" value="js" id="js" />
+            <label for="js">Javascript</label>
+          </li>
+        </ul>
+      </div>
+
+      <div role="group" class="group">
+        <h2 class="group-title">Опыт</h2>
+
+        <ul class="topic-list list">
+          <li>
+            <input type="radio" name="experience" value="junior" id="junior" />
+            <label for="junior">junior</label>
+          </li>
+          <li>
+            <input type="radio" name="experience" value="Middle" id="Middle" />
+            <label for="Middle">Middle</label>
+          </li>
+          <li>
+            <input type="radio" name="experience" value="Senior" id="Senior" />
+            <label for="Senior">Senior</label>
+          </li>
+        </ul>
+      </div>
+
+      <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+      <label for="comment">Оставьте комментарий</label>
+
+      <input type="checkbox" name="agreement" id="agreement" />
+      <label for="agreement">соглашаюсь с политикой конфиденциальности</label>
 
       <button type="submit">Оставить заявку</button>
     </form>

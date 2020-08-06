@@ -16,7 +16,19 @@ body {
   background-color: #f6d8ce;
 }
 .list {
-  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
 }
 
 .title::before {
@@ -76,4 +88,32 @@ body {
 }
 .modal-btn:hover .icon-cat {
   transform: translateY(-50%);
+}
+.js-speaker-form {
+  width: 600px;
+  margin: auto;
+  outline: 1px solid tomato;
+  padding: 20px 30px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  outline: 1px solid green;
+}
+.form-field input::placeholder {
+  color: tomato;
+}
+[type="checkbox"] {
+  /* width: 40px; */
+  /* height: 40px; */
+}
+.topic-list li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.topic-list input{
+  margin-right: 10px;
+}
 }
