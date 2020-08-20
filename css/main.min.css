@@ -1,0 +1,2 @@
+body{background-color:grey}body .box1{width:100px}.box-title{color:hotpink}.box2{background-color:indianred}.button{background-color:maroon}.button:hover,.button:focus{background-color:mintcream}.box2:hover .button{background-color:orange}.list-item{background-color:#3f3f57}.list-item:nth-child(2n+1){background-color:#684c43}
+/*# sourceMappingURL=main.min.css.map */

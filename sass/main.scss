@@ -1,0 +1,32 @@
+body {
+  background-color: grey;
+
+  .box1 {
+    width: 100px;
+  }
+}
+.box {
+  &-title {
+    color: hotpink;
+  }
+}
+.box2 {
+  background-color: indianred;
+}
+.button {
+  background-color: maroon;
+  &:hover,
+  &:focus {
+    background-color: mintcream;
+  }
+  .box2:hover & {
+    background-color: orange;
+  }
+}
+.list-item {
+  background-color: rgb(63, 63, 87);
+
+  &:nth-child(2n + 1) {
+    background-color: rgb(104, 76, 67);
+  }
+}
