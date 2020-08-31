@@ -3,7 +3,9 @@
 html {
   box-sizing: border-box;
 }
-
+body {
+  background-color: tan;
+}
 *,
 *::before,
 *::after {
@@ -15,4 +17,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.one {
+  back
 }
