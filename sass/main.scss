@@ -1,10 +1,15 @@
 @import "./vars";
 
-body {
-  background-color: grey;
+html {
+  box-sizing: border-box;
 }
-.thumb {
-  width: 1300px;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* margin: 0; 
+  padding: 0;*/
 }
 img {
   display: block;
