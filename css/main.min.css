@@ -1,2 +1,2 @@
-html{-webkit-box-sizing:border-box;box-sizing:border-box}body{background-color:tan}*,*::before,*::after{-webkit-box-sizing:inherit;box-sizing:inherit}img{display:block;max-width:100%;height:auto}
+html{-webkit-box-sizing:border-box;box-sizing:border-box}body{background-color:tan}*,*::before,*::after{-webkit-box-sizing:inherit;box-sizing:inherit}img{display:block;max-width:100%;height:auto}.one{background-color:aqua}.menu-btn{display:block}.menu-btn.is-open{display:none}.menu-container{display:none}.menu-container.is-open{display:block}
 /*# sourceMappingURL=main.min.css.map */

@@ -9,11 +9,22 @@
   <body>
     <header class="header">
       <div class="container">
-        <a class="logo" href=""></a>
-        <a href="">My Icecream</a>
-        <button type="button" class="menu-btn" data-menu-button>Нажми</button>
+        <a class="logo" href="index.html">
+          <img src="./images/logo 1.svg" alt="" />
+        </a>
+        <!-- <a href="">My Icecream</a> -->
+        <button
+          type="button"
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          Нажми
+        </button>
         <div class="menu-container" data-menu>
           <button type="button" class="modal-btn">Buy now</button>
+          <button type="button" class="close-btn">Close</button>
           <ul class="menu-list list">
             <li class="item">Home</li>
             <li class="item">About us</li>
@@ -39,5 +50,16 @@
         <li class="item">ipsum</li>
       </ul>
     </section>
+
+    <button class="modal-btn" data-modal-open>open</button>
+    <div class="backdrop is-hidden" data-modal>
+      <button class="close-btn" data-modal-close>close</button>
+      <form class="modal-form" action="">
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </form>
+    </div>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
