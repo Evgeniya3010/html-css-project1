@@ -9,57 +9,40 @@
   <body>
     <header class="header">
       <div class="container">
-        <a class="logo" href="index.html">
-          <img src="./images/logo 1.svg" alt="" />
+        <a class="logo" href="">
+          <picture>
+            <source srcset="./images/logo@1x.png 1x, ./images/logo@2x.png 2x" />
+
+            <img src="./images/logo@1x.png" alt="Логотип" />
+          </picture>
         </a>
-        <!-- <a href="">My Icecream</a> -->
-        <button
-          type="button"
-          class="menu-btn"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
-        >
-          Нажми
+        <button type="button" class="burger-btn" data-menu-button>
+          <svg class="burger-btn-icon" width="20" height="12">
+            <use href="./images/sprite.svg#icon-burger"></use>
+          </svg>
         </button>
         <div class="menu-container" data-menu>
-          <button type="button" class="modal-btn">Buy now</button>
-          <button type="button" class="close-btn">Close</button>
-          <ul class="menu-list list">
-            <li class="item">Home</li>
-            <li class="item">About us</li>
-            <li class="item">How it's made</li>
-            <li class="item">Our products</li>
-            <li class="item">Contact</li>
+          <button class="close-btn">
+            <svg class="close-btn-icon" width="14" height="14">
+              <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <button type="button" class="modal-btn">
+            Buy now
+            <svg class="modal-btn-icon" width="5" height="8">
+              <use href="./images/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+          <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>How it's made</li>
+            <li>Our products</li>
+            <li>Contact</li>
           </ul>
         </div>
       </div>
     </header>
-
-    <section class="one">
-      <ul class="products list">
-        Products &copy;
-        <li class="item">Lorem</li>
-        <li class="item">Lorem</li>
-        <li class="item">Lorem</li>
-      </ul>
-      <ul class="features list">
-        Features
-        <li class="item">ipsum</li>
-        <li class="item">ipsum</li>
-        <li class="item">ipsum</li>
-      </ul>
-    </section>
-
-    <button class="modal-btn" data-modal-open>open</button>
-    <div class="backdrop is-hidden" data-modal>
-      <button class="close-btn" data-modal-close>close</button>
-      <form class="modal-form" action="">
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
-      </form>
-    </div>
     <script src="./js/menu.js"></script>
   </body>
 </html>
