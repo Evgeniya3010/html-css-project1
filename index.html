@@ -9,29 +9,46 @@
   <body>
     <header class="header">
       <div class="container">
-        <a class="logo" href=""></a>
-        <a href="">My Icecream</a>
-        <button type="button" class="menu-btn" data-menu-button>Нажми</button>
+        <a class="logo" href="">
+          <picture>
+            <source srcset="./images/logo@1x.png 1x, ./images/logo@2x.png 2x" />
+
+            <img src="./images/logo@1x.png" alt="Логотип" />
+          </picture>
+        </a>
+        <button type="button" class="burger-btn" data-menu-button>
+          <svg class="burger-btn-icon" width="20" height="12">
+            <use href="./images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
         <div class="menu-container" data-menu>
-          <button type="button" class="modal-btn">Buy now</button>
-          <ul class="menu-list list">
-            <li class="item">Home</li>
-            <li class="item">About us</li>
-            <li class="item">How it's made</li>
-            <li class="item">Our products</li>
-            <li class="item">Contact</li>
+          <button class="close-btn">
+            <svg class="close-btn-icon" width="14" height="14">
+              <use href="./images/sprite.svg#icon-commas"></use>
+            </svg>
+          </button>
+          <button type="button" class="modal-btn">
+            Buy now
+            <svg class="modal-btn-icon">
+              <use href="./images/icon3.svg"></use>
+            </svg>
+          </button>
+          <svg class="close-btn-icon" width="14" height="14">
+            <use href="./images/sprite.svg#icon-arrow-medium"></use>
+          </svg>
+          <svg class="close-btn-icon" width="14" height="14">
+            <use href="./images/sprite.svg#icon-arrow-small"></use>
+          </svg>
+          <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>How it's made</li>
+            <li>Our products</li>
+            <li>Contact</li>
           </ul>
         </div>
       </div>
     </header>
-
-    <section class="one">
-      <ul class="products-list list">
-        Products &copy;
-        <li class="item">Lorem</li>
-        <li class="item">Lorem</li>
-        <li class="item">Lorem</li>
-      </ul>
-    </section>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
