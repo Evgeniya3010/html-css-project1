@@ -9,44 +9,81 @@
   <body>
     <header class="header">
       <div class="container">
-        <a class="logo" href="">
+        <a class="link logo" href="" aria-label="Logotype">
           <picture>
             <source srcset="./images/logo@1x.png 1x, ./images/logo@2x.png 2x" />
 
             <img src="./images/logo@1x.png" alt="Логотип" />
           </picture>
         </a>
-        <button type="button" class="burger-btn" data-menu-button>
-          <svg class="burger-btn-icon" width="20" height="12">
+
+        <button
+          type="button"
+          class="button burger-btn"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            class="burger-btn-icon"
+            width="20"
+            height="12"
+            aria-label="Open mobile menu"
+          >
             <use href="./images/sprite.svg#icon-burger"></use>
           </svg>
         </button>
-        <div class="menu-container" data-menu>
-          <button class="close-btn">
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <button class="button close-btn">
             <svg class="close-btn-icon" width="14" height="14">
-              <use href="./images/sprite.svg#icon-commas"></use>
+              <use href="./images/sprite.svg#icon-close"></use>
             </svg>
           </button>
-          <button type="button" class="modal-btn">
+          <button type="button" class="button buy-btn">
             Buy now
-            <svg class="modal-btn-icon">
-              <use href="./images/icon3.svg"></use>
+            <svg class="buy-btn-icon" width="8" height="10">
+              <use href="./images/sprite.svg#icon-arrow"></use>
             </svg>
           </button>
-          <svg class="close-btn-icon" width="14" height="14">
-            <use href="./images/sprite.svg#icon-arrow-medium"></use>
-          </svg>
-          <svg class="close-btn-icon" width="14" height="14">
-            <use href="./images/sprite.svg#icon-arrow-small"></use>
-          </svg>
-          <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>How it's made</li>
-            <li>Our products</li>
-            <li>Contact</li>
+          <ul class="list header-menu-list">
+            <li class="header-menu-list-item">
+              <a
+                class="link current"
+                href="index.html"
+                aria-label="Go to section Home"
+                >Home</a
+              >
+            </li>
+            <li class="header-menu-list-item">
+              <a class="link" href="" aria-label="Go to section About us"
+                >About us</a
+              >
+            </li>
+            <li class="header-menu-list-item">
+              <a class="link" href="" aria-label="Go to section How it's made"
+                >How it's made</a
+              >
+            </li>
+            <li class="header-menu-list-item">
+              <a class="link" href="" aria-label="Go to section Products"
+                >Our products</a
+              >
+            </li>
+            <li class="header-menu-list-item">
+              <a class="link" href="" aria-label="Go to section Contacts"
+                >Contact</a
+              >
+            </li>
           </ul>
         </div>
+
+        <button type="button" class="button buy-btn">
+          Buy now
+          <svg class="buy-btn-icon" width="7" height="9">
+            <use href="./images/sprite.svg#icon-arrow"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <script src="./js/menu.js"></script>
