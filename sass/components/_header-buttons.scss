@@ -1,14 +1,38 @@
 .burger-btn {
+  position: absolute;
+  // top: 23px;
+  z-index: 10;
+  // right: 28px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: transform 250ms linear;
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
+  padding: 0;
+  @media screen and (max-width: 767px) {
+    right: 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    right: 224px;
   }
   @media screen and (min-width: 1200px) {
     display: none;
+  }
+  .close-btn-icon {
+    display: none;
+  }
+  &.is-open {
+    @media screen and (max-width: 767px) {
+      right: 28px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      top: 23px;
+      right: 34px;
+    }
+    .close-btn-icon {
+      display: block;
+    }
+    .burger-btn-icon {
+      display: none;
+    }
   }
 }
 .buy-btn {
@@ -26,14 +50,13 @@
   @media screen and (max-width: 767px) {
     width: 209px;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 186px;
   }
-  transition: transform 250ms linear, background-color 250ms linear;
+  transition: background-color 250ms linear;
   &:hover,
   &:focus {
     background-color: $btn-hover-bg-color;
-    transform: scale(1.1);
   }
 }
 .header .container > .buy-btn {
@@ -60,16 +83,21 @@
     // border: 2px solid #d41443;
   }
 }
-.close-btn {
-  @media screen and (max-width: 1199px) {
-    position: absolute;
-    display: inline-flex;
-    top: 23px;
-    right: 28px;
-    transition: transform 250ms linear;
-    &:hover,
-    &:focus {
-      transform: rotate(-90deg);
-    }
-  }
-}
+
+// @media screen and (max-width: 1199px) {
+// .menu-container.is-open {
+//   .close-btn-icon {
+//     position: absolute;
+//     display: inline-flex;
+//     top: 23px;
+//     right: 28px;
+//     transition: transform 250ms linear;
+//     &:hover,
+//     &:focus {
+//       transform: rotate(-90deg);
+//     }
+//   }
+//   .menu-container .burger-btn {
+//     display: none;
+//   }
+// }

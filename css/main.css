@@ -70,13 +70,12 @@ img {
 }
 
 .header {
-  position: fixed;
-  z-index: 10;
   width: 100%;
-  background-color: #ffb8ca;
+  background-color: transparent;
 }
 
 .header .container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,13 +87,15 @@ img {
           justify-content: space-between;
 }
 
-.logo {
-  display: block;
+@media screen and (max-width: 767px) {
+  .header .container {
+    padding-top: 6px;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .logo {
-    margin-right: 291px;
+@media screen and (min-width: 768px) {
+  .header .container {
+    padding-top: 37px;
   }
 }
 
@@ -109,6 +110,15 @@ img {
   }
   .header-menu-list .header-menu-list-item:not(:last-child) {
     margin-right: 35px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .header-menu-list .header-menu-list-item {
+    border-top: 1px solid #e18298;
+  }
+  .header-menu-list:last-child {
+    border-bottom: 1px solid #e18298;
   }
 }
 
@@ -134,7 +144,6 @@ img {
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 21px;
-    border: 1px solid #e18298;
   }
 }
 
@@ -151,10 +160,6 @@ img {
           transform: scale(1.1);
 }
 
-.header-menu-list .current {
-  color: #d41443;
-}
-
 .menu-container {
   display: none;
 }
@@ -162,9 +167,7 @@ img {
 .menu-container.is-open {
   position: absolute;
   top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  right: 0;
   display: block;
   background-color: #e17992;
 }
@@ -200,6 +203,8 @@ img {
 }
 
 .burger-btn {
+  position: absolute;
+  z-index: 10;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -209,21 +214,50 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: -webkit-transform 250ms linear;
-  transition: -webkit-transform 250ms linear;
-  transition: transform 250ms linear;
-  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  padding: 0;
 }
 
-.burger-btn:hover, .burger-btn:focus {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media screen and (max-width: 767px) {
+  .burger-btn {
+    right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .burger-btn {
+    right: 224px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .burger-btn {
     display: none;
   }
+}
+
+.burger-btn .close-btn-icon {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .burger-btn.is-open {
+    right: 28px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .burger-btn.is-open {
+    top: 23px;
+    right: 34px;
+  }
+}
+
+.burger-btn.is-open .close-btn-icon {
+  display: block;
+}
+
+.burger-btn.is-open .burger-btn-icon {
+  display: none;
 }
 
 .buy-btn {
@@ -243,10 +277,8 @@ img {
   background-color: #ffffff;
   border-radius: 22px;
   height: 44px;
-  -webkit-transition: background-color 250ms linear, -webkit-transform 250ms linear;
-  transition: background-color 250ms linear, -webkit-transform 250ms linear;
-  transition: transform 250ms linear, background-color 250ms linear;
-  transition: transform 250ms linear, background-color 250ms linear, -webkit-transform 250ms linear;
+  -webkit-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
 }
 
 @media screen and (max-width: 767px) {
@@ -255,7 +287,7 @@ img {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .buy-btn {
     width: 186px;
   }
@@ -263,8 +295,6 @@ img {
 
 .buy-btn:hover, .buy-btn:focus {
   background-color: #ecebeb;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .header .container > .buy-btn {
@@ -295,24 +325,5 @@ img {
 
 .menu-container > .buy-btn .buy-btn-icon {
   margin-left: 20px;
-}
-
-@media screen and (max-width: 1199px) {
-  .close-btn {
-    position: absolute;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    top: 23px;
-    right: 28px;
-    -webkit-transition: -webkit-transform 250ms linear;
-    transition: -webkit-transform 250ms linear;
-    transition: transform 250ms linear;
-    transition: transform 250ms linear, -webkit-transform 250ms linear;
-  }
-  .close-btn:hover, .close-btn:focus {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
 }
 /*# sourceMappingURL=main.css.map */

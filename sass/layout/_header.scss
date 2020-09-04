@@ -1,27 +1,43 @@
 .header {
-  position: fixed;
-  z-index: 10;
+  // position: fixed;
+  // z-index: 10;
+
   width: 100%;
-  background-color: $tertiary-background-color;
+  // background-color: $tertiary-background-color;
+  background-color: transparent;
   .container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 767px) {
+      padding-top: 6px;
+    }
+    @media screen and (min-width: 768px) {
+      padding-top: 37px;
+    }
   }
 }
-.logo {
-  display: block;
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-right: 291px;
-  }
-}
+// .logo {
+//   display: block;
+//   @media screen and (min-width: 768px) and (max-width: 1199px) {
+//     margin-right: 291px;
+//   }
+// }
 .header-menu-list {
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: space-between;
-
     .header-menu-list-item:not(:last-child) {
       margin-right: 35px;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .header-menu-list-item {
+      border-top: 1px solid #e18298;
+    }
+    &:last-child {
+      border-bottom: 1px solid #e18298;
     }
   }
   .link {
@@ -34,7 +50,11 @@
       padding-top: 6px;
       padding-bottom: 6px;
       padding-left: 21px;
-      border: 1px solid #e18298;
+      // &:not(:last-child) {
+      // border-top: 1px solid #e18298;
+      // &:last-child {
+      //   border-bottom: 1px solid #e18298;
+      // } // }
     }
     @media screen and (min-width: 1200px) {
       font-size: 16px;
@@ -48,9 +68,9 @@
       transform: scale(1.1);
     }
   }
-  .current {
-    color: $secondary-text-color;
-  }
+  // .current {
+  //   color: $secondary-text-color;
+  // }
 }
 
 .menu-container {
@@ -59,8 +79,9 @@
   &.is-open {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
     display: block;
     background-color: $header-menu-bg-color;
     @media screen and (max-width: 767px) {

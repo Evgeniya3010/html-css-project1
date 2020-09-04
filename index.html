@@ -9,79 +9,81 @@
   <body>
     <header class="header">
       <div class="container">
-        <a class="link logo" href="" aria-label="Logotype">
+        <a class="link logo" href="index.html" aria-label="Logotype">
           <picture>
-            <source srcset="./images/logo@1x.png 1x, ./images/logo@2x.png 2x" />
+            <source
+              srcset="
+                ./images/png/logo1logo@1x.png 1x,
+                ./images/png/logo1logo@2x.png 2x
+              "
+            />
 
-            <img src="./images/logo@1x.png" alt="Логотип" />
+            <img src="./images/png/logo1logo@1x.png" alt="Logotype" />
           </picture>
         </a>
-
         <button
           type="button"
           class="button burger-btn"
           aria-expanded="false"
           aria-controls="menu-container"
+          aria-label="Open mobile menu"
           data-menu-button
         >
-          <svg
-            class="burger-btn-icon"
-            width="20"
-            height="12"
-            aria-label="Open mobile menu"
-          >
+          <svg class="burger-btn-icon" width="20" height="12">
             <use href="./images/sprite.svg#icon-burger"></use>
           </svg>
+          <svg class="close-btn-icon" width="14" height="14">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
         </button>
-
         <div class="menu-container" id="menu-container" data-menu>
-          <button class="button close-btn">
-            <svg class="close-btn-icon" width="14" height="14">
-              <use href="./images/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
           <button type="button" class="button buy-btn">
             Buy now
             <svg class="buy-btn-icon" width="8" height="10">
-              <use href="./images/sprite.svg#icon-arrow"></use>
+              <use href="./images/sprite.svg#icon-arrow-small"></use>
             </svg>
           </button>
-          <ul class="list header-menu-list">
-            <li class="header-menu-list-item">
-              <a
-                class="link current"
-                href="index.html"
-                aria-label="Go to section Home"
-                >Home</a
-              >
-            </li>
-            <li class="header-menu-list-item">
-              <a class="link" href="" aria-label="Go to section About us"
-                >About us</a
-              >
-            </li>
-            <li class="header-menu-list-item">
-              <a class="link" href="" aria-label="Go to section How it's made"
-                >How it's made</a
-              >
-            </li>
-            <li class="header-menu-list-item">
-              <a class="link" href="" aria-label="Go to section Products"
-                >Our products</a
-              >
-            </li>
-            <li class="header-menu-list-item">
-              <a class="link" href="" aria-label="Go to section Contacts"
-                >Contact</a
-              >
-            </li>
-          </ul>
+          <nav class="navigation">
+            <ul class="list header-menu-list">
+              <li class="header-menu-list-item">
+                <a
+                  class="link current"
+                  href="index.html"
+                  aria-label="Go to section Home"
+                  >Home</a
+                >
+              </li>
+              <li class="header-menu-list-item">
+                <a class="link" href="#" aria-label="Go to section About us"
+                  >About us</a
+                >
+              </li>
+              <li class="header-menu-list-item">
+                <a
+                  class="link"
+                  href="#"
+                  aria-label="Go to section How it's made"
+                  >How it's made</a
+                >
+              </li>
+              <li class="header-menu-list-item">
+                <a class="link" href="#" aria-label="Go to section Products"
+                  >Our products</a
+                >
+              </li>
+              <li class="header-menu-list-item">
+                <a class="link" href="#" aria-label="Go to section Contacts"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
 
         <button type="button" class="button buy-btn">
           Buy now
           <svg class="buy-btn-icon" width="7" height="9">
-            <use href="./images/sprite.svg#icon-arrow"></use>
+            <use href="./images/sprite.svg#icon-arrow-small"></use>
           </svg>
         </button>
       </div>
