@@ -35,7 +35,7 @@
     }
   }
 }
-.buy-btn {
+.modal-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,32 +53,32 @@
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 186px;
   }
-  transition: background-color 250ms linear;
+  transition: background-color 250ms $transition-timing-function;
   &:hover,
   &:focus {
     background-color: $btn-hover-bg-color;
   }
 }
-.header .container > .buy-btn {
+.header .container > .modal-btn {
   width: 160px;
   @media screen and (max-width: 767px) {
     display: none;
   }
-  .buy-btn-icon {
+  .modal-btn-icon {
     margin-left: 15px;
     // border: 2px solid #d41443;
   }
 }
 @media screen and (min-width: 1200px) {
-  .menu-container > .buy-btn,
+  .menu-container > .modal-btn,
   .close-btn {
     display: none;
   }
 }
-.menu-container > .buy-btn {
+.menu-container > .modal-btn {
   margin: auto;
   margin-bottom: 19px;
-  .buy-btn-icon {
+  .modal-btn-icon {
     margin-left: 20px;
     // border: 2px solid #d41443;
   }
